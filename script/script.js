@@ -10,10 +10,7 @@ const array = string.split("");
 const reducer = (multi, current) => multi * current;
 console.log(array.reduce(reducer));
 
-
-
 // const power = array.reduce(reducer) ** 3;
-
 // alert(String(array.reduce(reducer) ** 3).substring(0, 2));
 
 alert((String(array.reduce(reducer) ** 3).split("")).slice(0, 2));
