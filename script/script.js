@@ -1,16 +1,26 @@
-const num = 266219;
-const string = String(num);
-const array = string.split("");
+const lang = prompt("Введите язык");
 
-// let result = array.reduce(function (multi, current) {
-//    return multi * current;
-// }, 1);
-// console.log(result);
+if (lang === "ru") {
+   console.log('Пн', 'Вт', 'СР', 'Чт', 'Пт', 'Сб', 'Вс');
+} else if (lang === "en") {
+   console.log('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun');
+};
 
-const reducer = (multi, current) => multi * current;
-console.log(array.reduce(reducer));
+switch (lang) {
+   case "ru":
+      console.log('Пн', 'Вт', 'СР', 'Чт', 'Пт', 'Сб', 'Вс');
+      break;
+   case "en":
+      console.log('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun');
+      break;
+};
 
-// const power = array.reduce(reducer) ** 3;
-// alert(String(array.reduce(reducer) ** 3).substring(0, 2));
+// Я старался выполнить этот способ самостоятельно, но по совету сэнсея я начал гуглить и нагуглил)))
+const lang_array = [];
+lang_array["ru"] = ['Пн', 'Вт', 'СР', 'Чт', 'Пт', 'Сб', 'Вс'];
+lang_array["en"] = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+console.log(lang_array[lang]);
 
-alert((String(array.reduce(reducer) ** 3).split("")).slice(0, 2));
+const namePerson = prompt("Введите имя");
+let result = namePerson === "Артем" ? "Директор" : "Максим" ? "Преподаватель" : "Студент";
+console.log(result);
